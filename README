@@ -1,0 +1,5 @@
+#===================================================
+#   Kill all processes name including specified script
+#===================================================
+sudo kill -9 `ps aux | grep parse | awk '{print $2}'`
+

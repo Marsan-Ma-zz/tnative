@@ -1,0 +1,94 @@
+#------------------------------------------------------
+#  Summary
+#------------------------------------------------------
+  [remove decicively]
+    fid, braces, has_prefer_*, summary, lines, cnt_strike, cnt_img, cnt_input, cnt_hr, cnt_video, 
+
+  [may try remove]
+    authors, fb_comments/share/total, movies, tabs, links, ihour
+
+  [most important features]
+    brackets, canonical_link, domain, 
+    is_pure_nonad_domains, meta_description, title, meta_site_name, top_image,
+
+#------------------------------------------------------
+[feature_drop_20150926_1611.rpt]
+  loss much if drop:  
+    brackets, canonical_link, domain, 
+  loss little if drop:
+    fb_like/click, exclamarks
+  gain little if drop: 
+    fid, authors, braces, fb_comments/share/total, has_prefer_*
+
+[feature_select_single_20150926_1659.rpt]
+  > 0.6
+    is_pure_nonad_domains, meta_description, title, meta_site_name
+  > 0.55
+    meta_lang, exclamarks
+  > 0.5, < 0.55
+    status, lang_adrate_group, meta_keywords, is_prefer_nonad_domains, fb_comment_count, 
+  > 0.5, < 0.51
+    movies
+  < 0.5
+    summary, lines, fid
+
+
+[feature_select_single_20150927_0155.rpt]
+  > 0.6
+    canonical_link, top_image, meta_description, meta_site_name, 
+  > 0.55
+    quesmarks, is_pure_nonad_authors, words, fb_share_count, meta_lang, 
+  > 0.5, < 0.55
+    is_pure_ad_authors, tags, is_prefer_ad_authors, fb_comment_count, lang_adrate_group, 
+  > 0.5, < 0.51
+    movies, 
+  < 0.5
+    lines, tabs, fid, links, 
+
+[feature_drop_20150927_0155.rpt]
+  loss much if drop:  
+    canonical_link, domain, 
+  loss little if drop:
+    authors, brackets, exclamarks, fb_like, fb_click, html_cnt
+  gain little if drop: 
+    braces, fb_comment, fb_share, fb_total, fid, has_prefer_*, ihour
+
+[feature_select_single_20150927_0915.rpt]
+  > 0.55
+    cnt_section, cnt_ul, cnt_li, cnt_article, cnt_h3, cnt_a, cnt_p, 
+  > 0.5, < 0.55
+    cnt_h6, cnt_em, cnt_code, cnt_textarea, cnt_select, cnt_blockquote, cnt_h2, cnt_strong, cnt_small, cnt_h4, cnt_b, cnt_h5, cnt_h1, cnt_form, cnt_ol, 
+  > 0.5, < 0.51
+    cnt_iframe, 
+  < 0.5  
+    cnt_strike, cnt_img, cnt_input, cnt_hr, cnt_video, 
+
+
+[feature_drop_20150927_0915.rpt]
+  loss much if drop:  
+    cnt_a, cnt_p, cnt_select, cnt_table, cnt_ul, cnt_blockquote, cnt_b, 
+    cnt_h*, cnt_ol, cnt_section, cnt_small, cnt_strong, 
+  loss little if drop:
+    cnt_article,  cnt_article, cnt_code, cnt_em, cnt_form, cnt_iframe, cnt_li, cnt_textarea
+  gain little if drop:   
+    cnt_hr, cnt_img, cnt_input, cnt_strike, cnt_video
+
+
+[feature_drop_20150927_2258]
+  loss much if drop:  
+    cnt_table, exclamarks, is_prefer_ad_authors,
+  loss little if drop:
+    fb_like_cnt, fb_click_cnt, authors
+  gain little if drop:   
+    cnt_code, fb_comment_cnt, fb_share_cnt, html_cnt, ihour
+
+[.rpt]
+  > 0.55
+    quesmarks, spaces, is_prefer_ad_domains, keywords, fb_share_cnt, cnt_table, fb_like_cnt, fb_total_cnt
+  > 0.5, < 0.55
+    cnt_em, cnt_textarea, month, cnt_h5, cnt_h6, wday, cnt_iframe,
+  > 0.5, < 0.51
+    cnt_code, 
+  < 0.5  
+    fb_click_cnt, links, movies, tabs, 
+    
